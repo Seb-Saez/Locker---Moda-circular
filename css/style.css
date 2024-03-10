@@ -13,10 +13,12 @@
     --gris-oscuro: #2d2e30;
     --beige: #dacbb7;
     --azul: #16252e;
-    --gris-claro: #d1d5da;
+    --gris-claro: #f0ede8;
 
 }
 
+
+/*NAV hacer el buscador un filtro*/
 nav{
     background-color: var(--gris-oscuro);
     height: 15vh;
@@ -64,7 +66,9 @@ form button:hover{
 
 }
 
+/* Hast aca NAV */
 
+/*Hero section*/
 section.hero{
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url(../img/hero_dress.jpg);
     background-size: cover;
@@ -83,13 +87,67 @@ section h1{
     border-radius: 0.1em;
 }
 
-section.card-container{
+/* Hasta aca Hero section */
+
+/*Comienza el Main section con CARDS js*/
+
+section.card-container{     /* ACA HACER FLEX DIRECTION COLUMN PARA MOBILE*/
     min-height: 50vh;
     height: max-content;
-    outline: 5px solid aquamarine;
+    /*outline: 5px solid aquamarine;*/
+    display: flex;
+    flex-wrap: wrap ;
+    align-items: center;
+    justify-content: center;
+}
+
+div.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 5px;
+  margin: 20px;
+  height: 60vh;
+  width: 20vw;
+  border: 3px solid var(--beige);
+  border-radius: 0.5em;
+  background-color: var(--gris-claro);
+
+}
+
+img.img-vestido{
+  height: 80%;
+  border-radius: 0.5em;
+
+}
+
+button.btn-reserva{
+  border: 2px outset var(--beige);
+  border-radius: 0.2em;
+  background-color: var(--beige);
+  padding: 3px;
+  width: 40%;
+  transition: 0.05s;
+}
+
+button.btn-reserva:hover{
+  transform: scale(110%);
+  cursor: pointer;
+}
+button.btn-reserva:active{
+  transform: scale(110%);
+  cursor: pointer;
+  border: 2px inset var(--beige);
 }
 
 
+
+
+
+/* Hasta aca con section CARDS */
+
+/*Footer*/
 footer{
     display: flex;
     justify-content: space-evenly;
