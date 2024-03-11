@@ -18,16 +18,34 @@
         <h1>Sumate a la moda circular</h1>
     </section>
     <section class="main_card_container">
+        <section class="talle-filters">
+            <div>Talles:</div>
+            <label><input type="checkbox" value="u"> Unico</label>
+            <label><input type="checkbox" value="s"> S</label>
+            <label><input type="checkbox" value="m"> M</label>
+            <label><input type="checkbox" value="l"> L</label>
+        </section>
+
         <section class="card-container">
-            <!-- <div class="card">
-                <h3>Benjamin</h3>
-                <img src="./vestidos/benjamin_m.jpg" class="img-vestido" alt="vestido">
-                <h4>Talle: M</h4>
-                <h4>Precio: xxxx</h4>
-                <button class="btn-reserva">Reservar</button>
-            </div> -->
+            <!-- Aca van las cards hechas con la funcion -->
+            <!-- card modelo para css
+             <div class="card">
+                <h3>vison</h3>
+                <img src="./vestidos/vison_s.jpg" class="img-vestido" alt="vestido">
+                <h4>Talle: s</h4>
+                <h4>Precio: 4800</h4>
+                <button class="btn-reserva" data-nombre="vison" data-precio="4800">Reservar</button>
+              </div> -->
         </section>
     </section>
+    <section class="carro-container">
+        <div class="carrito-visible">Tu carrito</div>
+        <ul id="listaCarrito">
+        </ul>
+        <div class="carrito-visible" id="total-carrito">0</div>
+        <button class="clear-carro" type="submit">Limpiar carrito</button>
+      </section>
+      
     <footer>
         <img src="./img/locker_blanco.png" alt="Locker" class="footer-logo">
         <h2>✆ | +54 9 2613 01-2328</h2>
