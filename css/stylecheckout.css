@@ -1,0 +1,244 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+:root{
+    --blanco: rgb(245, 244, 241);
+    --gris-oscuro: #2d2e30;
+    --beige: #dacbb7;
+    --azul: #16252e;
+    --gris-claro: #f0ede8;
+
+}
+body{
+  background-color: var(--gris-claro);
+}
+
+
+/*NAV hacer el buscador un filtro*/
+nav{
+    background-color: var(--gris-oscuro);
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+}
+nav img{
+    height: 90%;
+}
+
+form input{
+    background-color: var(--gris-claro);
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-radius: 0.1em;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 3px;
+    margin-right: 15px;
+    
+}
+
+form input:focus-visible{
+    border: none;
+    outline: none;
+}
+
+
+
+/* Hast aca NAV */
+
+
+/*Footer*/
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--gris-oscuro);
+    height: 30vh;
+    color: white;
+  }
+  
+  .footer-logo{
+    height: 150px;
+    margin: 20px;
+  }
+  
+  
+  footer a img{
+    height: 50px;
+  }
+  footer a{
+    margin: 20px;
+  }
+  
+  footer h2{
+    margin: 20px;
+  }
+footer iframe{
+    height: 90%;
+    border-radius: 1em;
+}
+
+
+
+/* ACA EMPIEZA EL CSS DE CHECKOUT */
+
+
+/*en nav btn home*/
+.btn-home{
+  color: var(--gris-claro);
+  text-decoration: none;
+  height: 30px;
+  width: 100px;
+  padding: auto;
+  border: 2px solid var(--beige);
+  border-radius: 0.3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  
+}
+.btn-home:hover{
+  transform: scale(105%);
+}
+
+section.checkoutMainContainer{
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section.checkoutMainContainer h1{
+  color: black;
+  margin: 15px;
+  font-size: 30px;
+  border: 3px solid var(--beige);
+  border-radius: 0.3em;
+  padding: 5px;
+  width: 25vw;
+  text-align: center;
+}
+
+section.checkoutMainContainer h2{
+  color: black;
+  margin: auto;
+  font-size: 25px;
+  padding: 5px;
+  width: 25vw;
+  text-align: center;
+}
+
+section.card-container{
+  background-color: var(--blanco);
+  border-radius: 0.5em;
+  padding: 40px;
+  margin: 40px;
+  width: 90vw;
+  min-height: 20vh;
+  grid-auto-flow: row; 
+  gap: 50px;
+}
+
+div.card-checkout{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  border: 2px solid var(--beige);
+  border-radius: 0.3em;
+  padding: 10px 70px;
+}
+
+div.card-checkout h3{
+  text-transform: capitalize;
+}
+
+div.card-checkout img{
+  height: 20vh;
+}
+
+button.clear-carro{
+  background-color: var(--beige);
+  border-radius: 0.3em;
+  width: 150px;
+  margin: 20px;
+  padding: 3px;
+  text-align: center;
+  font-size: 15px;
+}
+button.clear-carro:hover{
+  transform: scale(110%);
+  cursor: pointer;
+}
+button.clear-carro:active{
+  transform: scale(110%);
+  cursor: pointer;
+  border: 2px inset var(--beige);
+}
+
+
+/*boton reservar*/
+
+button.btn{
+  background-color: var(--beige);
+  border-radius: 0.3em;
+  border: none;
+  color: #16252e;
+  width: 250px;
+  height: 50px;
+  margin: 20px;
+  padding: 3px;
+  text-align: center;
+  font-size: 25px;
+}
+button.btn:hover{
+  transform: scale(110%);
+  background-color: var(--azul);
+  cursor: pointer;
+}
+button.btn:active{
+  transform: scale(110%);
+  background-color: var(--azul);
+  cursor: pointer;
+  border: 2px inset var(--beige);
+}
+
+/*ventana pago*/
+
+div.offcanvas-body{
+  background-color: var(--gris-claro);
+}
+
+div.row{
+  margin-top: 30px;
+}
+
+input.form-control:focus{
+  border: none;
+  box-shadow:none;
+}
+input.form-control:focus-visible{
+  border: none;
+  box-shadow:none;
+}
+
+/*aca esta el boton de la ventana emergente de pago*/
+button.btn-compra{
+  width: 200px;
+  background-color: var(--beige);
+  margin-top: 30px;
+  border: 1px outset var(--beige);
+  border-radius: 0.3em;
+}
