@@ -1,6 +1,6 @@
-// cargar de forma asincronica los datos desde un json
+// cargar de forma asincronica los datos desde el json
 
-let vestidos = [];
+let vestidos = [];    // tiene que estar delcarado el array por afuera, sino no funciona
 
 fetch('../DB/db.json')
   .then(res => res.json())
@@ -50,9 +50,6 @@ checkbox.addEventListener('change', function () {
 });
 });
 
-//generarTarjetas(vestidos, []); // mostrar las tarjetas
-
-
 
 // Función para actualizar el carrito
 
@@ -73,11 +70,11 @@ carrito.forEach(vestido => {
   listaCarrito.appendChild(listItem);
 });
 
-// Guarda el carrito en el local storage
+// Guardar el carro en el local storage
 localStorage.setItem('carrito', JSON.stringify(carrito));
 }
 
-// Función para limpiar el carrito con el boton "limpiar carrito"
+// Función para limpiar el carrito con el boton limpiar carrito
 function limpiarCarrito() {
 
 localStorage.removeItem('carrito');
@@ -91,7 +88,7 @@ actualizarCarrito(); // volver a actualizar la interfaz
 }
 
 // Evento de clic para el botón "limpiar carrito"
-document.addEventListener('DOMContentLoaded', function () {  // --------DUDA------  no entiendo porque hay que poner esto del DOMContetnLoaded, me ayude con chatgpt en esta funcion
+document.addEventListener('DOMContentLoaded', function () {  // --------DUDA------  no me quedo del todo claro porque debia esperar que se cargue el dom antes de llamar al click de borrar
 const clearCarroBtn = document.querySelector('.clear-carro');
 
 clearCarroBtn.addEventListener('click', limpiarCarrito);
@@ -119,7 +116,7 @@ document.addEventListener('click', function (event) {
       } else {
           const precio = /^\d+(\.\d+)?$/.test(precioString) ? parseFloat(precioString) : 0;
           
-          carrito.push({ nombre, precio, imagenURL }); // Guardar la URL de la imagen en el carrito
+          carrito.push({ nombre, precio, imagenURL });
           
           Swal.fire({
               title: "Bravo!",
@@ -127,10 +124,10 @@ document.addEventListener('click', function (event) {
               icon: "success"
           });
 
-          // Guarda el carrito en el Local Storage
+          // guardar el carro
           localStorage.setItem('carrito', JSON.stringify(carrito));
 
-          // Actualiza la interfaz del carrito de nuevo
+          // volver a actualizar la interfaz
           actualizarCarrito();
       }
   }

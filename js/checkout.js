@@ -1,5 +1,5 @@
 const carritoCheck = JSON.parse(localStorage.getItem('carrito'));
-console.log(carritoCheck);                      //BORRAR ACA DESPUES
+//console.log(carritoCheck);                      // COMENTAR ACA DESPUES es para verificar si me trae bien el array del local storage
 
 // funcion para generar las tarjetas del carrito
 
@@ -49,7 +49,7 @@ function limpiarCarrito() {
     }
 
 // boton para eliminar carrito
-document.addEventListener('DOMContentLoaded', function () {  // --------DUDA------  no entiendo porque hay que poner esto del DOMContetnLoaded, me ayude con chatgpt en esta funcion
+document.addEventListener('DOMContentLoaded', function () { 
     const clearCarroBtn = document.querySelector('.clear-carro');
     
     clearCarroBtn.addEventListener('click', limpiarCarrito);
