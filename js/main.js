@@ -2,8 +2,7 @@
 
 let vestidos = [];
 
-//fetch('../DB/db.json')
-fetch('https://github.com/Seb-Saez/Locker---Moda-circular/blob/main/DB/db.json')
+fetch('../DB/db.json')
   .then(res => res.json())
   .then(data => {
     const { vestidos: vestidosData = [] } = data;
